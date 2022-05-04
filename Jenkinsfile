@@ -65,7 +65,7 @@ pipeline {
 			
 
 			 sh "git checkout main"
-			  sh "git remote add origin https://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@https://github.com/madhan1412/awesome-go.git/madhan1412/awesome-go"
+			  sh "git remote add origin https://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@github.com/madhan1412/awesome-go.git/madhan1412/awesome-go"
                        
 			 sh "sed -i 's/unix/linux/g' ./chart/file.txt"
 			
