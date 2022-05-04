@@ -63,7 +63,7 @@ pipeline {
                         //sh  "chmod +x /usr/local/bin/yq"
 			//sh "yq -i '.rbi-cluster-admin.image.tag = \"${VERSION}\"' ./chart/values.yaml"
 			
-			withCredentials([usernamePassword(credentialsId: 'github_creds', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
+			withCredentials([usernamePassword(credentialsId: 'github-pass', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
 			       sh "git checkout main"
 				 //sh "git remote add origin https://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@github.com/madhan1412/awesome-go.git/madhan1412/awesome-go"
 				//sh "git remote set-url origin https:/${GIT_PASSWORD}/@github.com/madhan1412/awesome-go.git/${GIT_USERNAME}/awesome-go.git"
