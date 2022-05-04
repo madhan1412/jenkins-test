@@ -62,10 +62,11 @@ pipeline {
                         //sh " wget https://github.com/mikefarah/yq/releases/download/v4.24.5/yq_linux_amd64 -O /usr/local/bin/yq &> /dev/null 
                         //sh  "chmod +x /usr/local/bin/yq"
 			//sh "yq -i '.rbi-cluster-admin.image.tag = \"${VERSION}\"' ./chart/values.yaml"
+			 sh "git checkout main"
 			 sh "sed -i 's/unix/linux/g' ./chart/file.txt"
 			
 			sh "git config --global user.name \"jenkins\" && git config --global user.email jenkins@frbi.dev"
-                        sh "git commit -am \"JENKINS:Auto-commit\" && git branch && git checkout main && git push https://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@github.com/madhan1412/awesome-go.git"
+                        sh "git commit -am \"JENKINS:Auto-commit\" && git branch && git push https://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@github.com/madhan1412/awesome-go.git"
 
                        /* if (env.TAG_NAME == null && env.BRANCH_NAME == 'gitcheckin') {
 		                           print "inside if env.TAG_NAME = ${env.TAG_NAME}"
