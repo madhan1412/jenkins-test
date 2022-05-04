@@ -65,7 +65,7 @@ pipeline {
 			 sh "sed -i 's/unix/linux/g' ./chart/file.txt"
 			
 			sh "git config --global user.name \"jenkins\" && git config --global user.email jenkins@frbi.dev"
-                        sh "git commit -am \"JENKINS:Auto-commit\" && git push https://github.com/madhan1412/awesome-go.git"
+                        sh "git commit -am \"JENKINS:Auto-commit\" && git push origin main https://github.com/madhan1412/awesome-go.git"
 
                        /* if (env.TAG_NAME == null && env.BRANCH_NAME == 'gitcheckin') {
 		                           print "inside if env.TAG_NAME = ${env.TAG_NAME}"
