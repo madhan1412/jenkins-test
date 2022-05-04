@@ -65,12 +65,13 @@ pipeline {
 			
 
 			 sh "git checkout main"
-			  sh "git remote add origin https://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@github.com/madhan1412/awesome-go.git/madhan1412/awesome-go"
+			  //sh "git remote add origin https://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@github.com/madhan1412/awesome-go.git/madhan1412/awesome-go"
                        
 			 sh "sed -i 's/unix/linux/g' ./chart/file.txt"
+			 sh "git remote -v"
 			
 			sh "git config --global user.name \"jenkins\" && git config --global user.email jenkins@frbi.dev"
-                        sh "git commit -am \"JENKINS:Auto-commit\" && git branch && git push origin main"
+                        sh "git commit -am \"JENKINS:Auto-commit\" && git branch && git push -u origin main"
 
                        /* if (env.TAG_NAME == null && env.BRANCH_NAME == 'gitcheckin') {
 		                           print "inside if env.TAG_NAME = ${env.TAG_NAME}"
