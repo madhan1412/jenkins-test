@@ -70,7 +70,7 @@ pipeline {
 		         	 sh "sed -i 's/unix/linux/g' ./chart/file.txt"
 				 sh "git remote -v"
 				 sh "git config --global user.name \"jenkins\" && git config --global user.email jenkins@frbi.dev"
-			         sh "git commit -am \"JENKINS:Auto-commit\" && git branch && git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/madhan1412/awesome-go.git"
+			         sh "git commit -am \"JENKINS:Auto-commit\" && git branch && git push https://${GIT_PASSWORD}@github.com/madhan1412/awesome-go.git"
 			     }
 			
 
